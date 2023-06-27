@@ -19,7 +19,7 @@ public class AppleTest {
     @ToString
     static class Apple {
         private Color color;
-        private int weight;
+        private Integer weight;
     }
 
     /**
