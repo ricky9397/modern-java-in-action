@@ -161,6 +161,8 @@ public class AppleTest {
         System.out.println(filterApples(Arrays.asList(appleList), null, 50, false));
 
         System.out.println(filterApples(Arrays.asList(appleList), new AppleGreenColorPredicate()));
+
+        // I/F를 통해 new ApplePredicate() { Override 하여 원하는 값 filter 하여 코드양을 줄임 }
         System.out.println(filterApples(Arrays.asList(appleList), new ApplePredicate() {
             @Override
             public boolean test(Apple apple) {
@@ -168,6 +170,7 @@ public class AppleTest {
             }
         }));
 
+        // Override 람다 식으로 filter 하여 코드양 줄임
         System.out.println(filterApples(Arrays.asList(appleList), (Apple apple) -> Color.RED.equals(apple.getColor())));
 
     }
