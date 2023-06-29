@@ -1,0 +1,5 @@
+package ch09.ricky.observer;
+
+public interface Observer {
+    void notify(String tweet);
+}
